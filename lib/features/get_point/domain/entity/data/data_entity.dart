@@ -1,4 +1,4 @@
-import 'package:client/features/get/domain/entity/point/point_entity.dart';
+import 'package:client/features/get_point/domain/entity/point/point_entity.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'data_entity.freezed.dart';

@@ -1,5 +1,9 @@
-import 'package:client/features/get/presentation/get_url.dart';
+import 'package:client/config/router/app_router_name.dart';
+import 'package:client/features/get_point/presentation/cubit/get_cubit.dart';
+import 'package:client/features/get_point/presentation/get_url.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -22,7 +26,10 @@ class HomeScreen extends StatelessWidget {
                 child: SizedBox(
                   width: double.infinity,
                   child: FilledButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      context.read<GetCubit>().getPointData();
+                      context.pushNamed(AppRouterName.process);
+                    },
                     child: const Text('Start coating process'),
                   ),
                 ),

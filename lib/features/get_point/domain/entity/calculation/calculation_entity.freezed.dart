@@ -24,8 +24,8 @@ mixin _$CalculationEntity {
   bool get error => throw _privateConstructorUsedError;
   @JsonKey(name: 'message', defaultValue: '')
   String get message => throw _privateConstructorUsedError;
-  @JsonKey(name: 'data')
-  DataEntity? get data => throw _privateConstructorUsedError;
+  @JsonKey(name: 'data', defaultValue: [])
+  List<DataEntity> get data => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -42,9 +42,7 @@ abstract class $CalculationEntityCopyWith<$Res> {
   $Res call(
       {@JsonKey(name: 'error', defaultValue: false) bool error,
       @JsonKey(name: 'message', defaultValue: '') String message,
-      @JsonKey(name: 'data') DataEntity? data});
-
-  $DataEntityCopyWith<$Res>? get data;
+      @JsonKey(name: 'data', defaultValue: []) List<DataEntity> data});
 }
 
 /// @nodoc
@@ -62,7 +60,7 @@ class _$CalculationEntityCopyWithImpl<$Res, $Val extends CalculationEntity>
   $Res call({
     Object? error = null,
     Object? message = null,
-    Object? data = freezed,
+    Object? data = null,
   }) {
     return _then(_value.copyWith(
       error: null == error
@@ -73,23 +71,11 @@ class _$CalculationEntityCopyWithImpl<$Res, $Val extends CalculationEntity>
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String,
-      data: freezed == data
+      data: null == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
-              as DataEntity?,
+              as List<DataEntity>,
     ) as $Val);
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $DataEntityCopyWith<$Res>? get data {
-    if (_value.data == null) {
-      return null;
-    }
-
-    return $DataEntityCopyWith<$Res>(_value.data!, (value) {
-      return _then(_value.copyWith(data: value) as $Val);
-    });
   }
 }
 
@@ -104,10 +90,7 @@ abstract class _$$CalculationEntityImplCopyWith<$Res>
   $Res call(
       {@JsonKey(name: 'error', defaultValue: false) bool error,
       @JsonKey(name: 'message', defaultValue: '') String message,
-      @JsonKey(name: 'data') DataEntity? data});
-
-  @override
-  $DataEntityCopyWith<$Res>? get data;
+      @JsonKey(name: 'data', defaultValue: []) List<DataEntity> data});
 }
 
 /// @nodoc
@@ -123,7 +106,7 @@ class __$$CalculationEntityImplCopyWithImpl<$Res>
   $Res call({
     Object? error = null,
     Object? message = null,
-    Object? data = freezed,
+    Object? data = null,
   }) {
     return _then(_$CalculationEntityImpl(
       error: null == error
@@ -134,10 +117,10 @@ class __$$CalculationEntityImplCopyWithImpl<$Res>
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String,
-      data: freezed == data
-          ? _value.data
+      data: null == data
+          ? _value._data
           : data // ignore: cast_nullable_to_non_nullable
-              as DataEntity?,
+              as List<DataEntity>,
     ));
   }
 }
@@ -148,7 +131,9 @@ class _$CalculationEntityImpl implements _CalculationEntity {
   const _$CalculationEntityImpl(
       {@JsonKey(name: 'error', defaultValue: false) required this.error,
       @JsonKey(name: 'message', defaultValue: '') required this.message,
-      @JsonKey(name: 'data') this.data});
+      @JsonKey(name: 'data', defaultValue: [])
+      required final List<DataEntity> data})
+      : _data = data;
 
   factory _$CalculationEntityImpl.fromJson(Map<String, dynamic> json) =>
       _$$CalculationEntityImplFromJson(json);
@@ -159,9 +144,14 @@ class _$CalculationEntityImpl implements _CalculationEntity {
   @override
   @JsonKey(name: 'message', defaultValue: '')
   final String message;
+  final List<DataEntity> _data;
   @override
-  @JsonKey(name: 'data')
-  final DataEntity? data;
+  @JsonKey(name: 'data', defaultValue: [])
+  List<DataEntity> get data {
+    if (_data is EqualUnmodifiableListView) return _data;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_data);
+  }
 
   @override
   String toString() {
@@ -175,12 +165,13 @@ class _$CalculationEntityImpl implements _CalculationEntity {
             other is _$CalculationEntityImpl &&
             (identical(other.error, error) || other.error == error) &&
             (identical(other.message, message) || other.message == message) &&
-            (identical(other.data, data) || other.data == data));
+            const DeepCollectionEquality().equals(other._data, _data));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, error, message, data);
+  int get hashCode => Object.hash(
+      runtimeType, error, message, const DeepCollectionEquality().hash(_data));
 
   @JsonKey(ignore: true)
   @override
@@ -201,7 +192,8 @@ abstract class _CalculationEntity implements CalculationEntity {
   const factory _CalculationEntity(
       {@JsonKey(name: 'error', defaultValue: false) required final bool error,
       @JsonKey(name: 'message', defaultValue: '') required final String message,
-      @JsonKey(name: 'data') final DataEntity? data}) = _$CalculationEntityImpl;
+      @JsonKey(name: 'data', defaultValue: [])
+      required final List<DataEntity> data}) = _$CalculationEntityImpl;
 
   factory _CalculationEntity.fromJson(Map<String, dynamic> json) =
       _$CalculationEntityImpl.fromJson;
@@ -213,8 +205,8 @@ abstract class _CalculationEntity implements CalculationEntity {
   @JsonKey(name: 'message', defaultValue: '')
   String get message;
   @override
-  @JsonKey(name: 'data')
-  DataEntity? get data;
+  @JsonKey(name: 'data', defaultValue: [])
+  List<DataEntity> get data;
   @override
   @JsonKey(ignore: true)
   _$$CalculationEntityImplCopyWith<_$CalculationEntityImpl> get copyWith =>

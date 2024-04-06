@@ -18,45 +18,45 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$Failure {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() serverError,
-    required TResult Function() parseError,
+    required TResult Function() tooManyRequests,
     required TResult Function() noInternetConnection,
+    required TResult Function() invalidUrl,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? serverError,
-    TResult? Function()? parseError,
+    TResult? Function()? tooManyRequests,
     TResult? Function()? noInternetConnection,
+    TResult? Function()? invalidUrl,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? serverError,
-    TResult Function()? parseError,
+    TResult Function()? tooManyRequests,
     TResult Function()? noInternetConnection,
+    TResult Function()? invalidUrl,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_ServerError value) serverError,
-    required TResult Function(_ParseError value) parseError,
+    required TResult Function(_TooManyRequests value) tooManyRequests,
     required TResult Function(_NoInternetConnection value) noInternetConnection,
+    required TResult Function(_InvalidUrl value) invalidUrl,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_ServerError value)? serverError,
-    TResult? Function(_ParseError value)? parseError,
+    TResult? Function(_TooManyRequests value)? tooManyRequests,
     TResult? Function(_NoInternetConnection value)? noInternetConnection,
+    TResult? Function(_InvalidUrl value)? invalidUrl,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_ServerError value)? serverError,
-    TResult Function(_ParseError value)? parseError,
+    TResult Function(_TooManyRequests value)? tooManyRequests,
     TResult Function(_NoInternetConnection value)? noInternetConnection,
+    TResult Function(_InvalidUrl value)? invalidUrl,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -80,35 +80,35 @@ class _$FailureCopyWithImpl<$Res, $Val extends Failure>
 }
 
 /// @nodoc
-abstract class _$$ServerErrorImplCopyWith<$Res> {
-  factory _$$ServerErrorImplCopyWith(
-          _$ServerErrorImpl value, $Res Function(_$ServerErrorImpl) then) =
-      __$$ServerErrorImplCopyWithImpl<$Res>;
+abstract class _$$TooManyRequestsImplCopyWith<$Res> {
+  factory _$$TooManyRequestsImplCopyWith(_$TooManyRequestsImpl value,
+          $Res Function(_$TooManyRequestsImpl) then) =
+      __$$TooManyRequestsImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$ServerErrorImplCopyWithImpl<$Res>
-    extends _$FailureCopyWithImpl<$Res, _$ServerErrorImpl>
-    implements _$$ServerErrorImplCopyWith<$Res> {
-  __$$ServerErrorImplCopyWithImpl(
-      _$ServerErrorImpl _value, $Res Function(_$ServerErrorImpl) _then)
+class __$$TooManyRequestsImplCopyWithImpl<$Res>
+    extends _$FailureCopyWithImpl<$Res, _$TooManyRequestsImpl>
+    implements _$$TooManyRequestsImplCopyWith<$Res> {
+  __$$TooManyRequestsImplCopyWithImpl(
+      _$TooManyRequestsImpl _value, $Res Function(_$TooManyRequestsImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$ServerErrorImpl implements _ServerError {
-  const _$ServerErrorImpl();
+class _$TooManyRequestsImpl implements _TooManyRequests {
+  const _$TooManyRequestsImpl();
 
   @override
   String toString() {
-    return 'Failure.serverError()';
+    return 'Failure.tooManyRequests()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$ServerErrorImpl);
+        (other.runtimeType == runtimeType && other is _$TooManyRequestsImpl);
   }
 
   @override
@@ -117,33 +117,33 @@ class _$ServerErrorImpl implements _ServerError {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() serverError,
-    required TResult Function() parseError,
+    required TResult Function() tooManyRequests,
     required TResult Function() noInternetConnection,
+    required TResult Function() invalidUrl,
   }) {
-    return serverError();
+    return tooManyRequests();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? serverError,
-    TResult? Function()? parseError,
+    TResult? Function()? tooManyRequests,
     TResult? Function()? noInternetConnection,
+    TResult? Function()? invalidUrl,
   }) {
-    return serverError?.call();
+    return tooManyRequests?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? serverError,
-    TResult Function()? parseError,
+    TResult Function()? tooManyRequests,
     TResult Function()? noInternetConnection,
+    TResult Function()? invalidUrl,
     required TResult orElse(),
   }) {
-    if (serverError != null) {
-      return serverError();
+    if (tooManyRequests != null) {
+      return tooManyRequests();
     }
     return orElse();
   }
@@ -151,148 +151,40 @@ class _$ServerErrorImpl implements _ServerError {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_ServerError value) serverError,
-    required TResult Function(_ParseError value) parseError,
+    required TResult Function(_TooManyRequests value) tooManyRequests,
     required TResult Function(_NoInternetConnection value) noInternetConnection,
+    required TResult Function(_InvalidUrl value) invalidUrl,
   }) {
-    return serverError(this);
+    return tooManyRequests(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_ServerError value)? serverError,
-    TResult? Function(_ParseError value)? parseError,
+    TResult? Function(_TooManyRequests value)? tooManyRequests,
     TResult? Function(_NoInternetConnection value)? noInternetConnection,
+    TResult? Function(_InvalidUrl value)? invalidUrl,
   }) {
-    return serverError?.call(this);
+    return tooManyRequests?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_ServerError value)? serverError,
-    TResult Function(_ParseError value)? parseError,
+    TResult Function(_TooManyRequests value)? tooManyRequests,
     TResult Function(_NoInternetConnection value)? noInternetConnection,
+    TResult Function(_InvalidUrl value)? invalidUrl,
     required TResult orElse(),
   }) {
-    if (serverError != null) {
-      return serverError(this);
+    if (tooManyRequests != null) {
+      return tooManyRequests(this);
     }
     return orElse();
   }
 }
 
-abstract class _ServerError implements Failure {
-  const factory _ServerError() = _$ServerErrorImpl;
-}
-
-/// @nodoc
-abstract class _$$ParseErrorImplCopyWith<$Res> {
-  factory _$$ParseErrorImplCopyWith(
-          _$ParseErrorImpl value, $Res Function(_$ParseErrorImpl) then) =
-      __$$ParseErrorImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$ParseErrorImplCopyWithImpl<$Res>
-    extends _$FailureCopyWithImpl<$Res, _$ParseErrorImpl>
-    implements _$$ParseErrorImplCopyWith<$Res> {
-  __$$ParseErrorImplCopyWithImpl(
-      _$ParseErrorImpl _value, $Res Function(_$ParseErrorImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$ParseErrorImpl implements _ParseError {
-  const _$ParseErrorImpl();
-
-  @override
-  String toString() {
-    return 'Failure.parseError()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$ParseErrorImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() serverError,
-    required TResult Function() parseError,
-    required TResult Function() noInternetConnection,
-  }) {
-    return parseError();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? serverError,
-    TResult? Function()? parseError,
-    TResult? Function()? noInternetConnection,
-  }) {
-    return parseError?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? serverError,
-    TResult Function()? parseError,
-    TResult Function()? noInternetConnection,
-    required TResult orElse(),
-  }) {
-    if (parseError != null) {
-      return parseError();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_ServerError value) serverError,
-    required TResult Function(_ParseError value) parseError,
-    required TResult Function(_NoInternetConnection value) noInternetConnection,
-  }) {
-    return parseError(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_ServerError value)? serverError,
-    TResult? Function(_ParseError value)? parseError,
-    TResult? Function(_NoInternetConnection value)? noInternetConnection,
-  }) {
-    return parseError?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_ServerError value)? serverError,
-    TResult Function(_ParseError value)? parseError,
-    TResult Function(_NoInternetConnection value)? noInternetConnection,
-    required TResult orElse(),
-  }) {
-    if (parseError != null) {
-      return parseError(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _ParseError implements Failure {
-  const factory _ParseError() = _$ParseErrorImpl;
+abstract class _TooManyRequests implements Failure {
+  const factory _TooManyRequests() = _$TooManyRequestsImpl;
 }
 
 /// @nodoc
@@ -334,9 +226,9 @@ class _$NoInternetConnectionImpl implements _NoInternetConnection {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() serverError,
-    required TResult Function() parseError,
+    required TResult Function() tooManyRequests,
     required TResult Function() noInternetConnection,
+    required TResult Function() invalidUrl,
   }) {
     return noInternetConnection();
   }
@@ -344,9 +236,9 @@ class _$NoInternetConnectionImpl implements _NoInternetConnection {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? serverError,
-    TResult? Function()? parseError,
+    TResult? Function()? tooManyRequests,
     TResult? Function()? noInternetConnection,
+    TResult? Function()? invalidUrl,
   }) {
     return noInternetConnection?.call();
   }
@@ -354,9 +246,9 @@ class _$NoInternetConnectionImpl implements _NoInternetConnection {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? serverError,
-    TResult Function()? parseError,
+    TResult Function()? tooManyRequests,
     TResult Function()? noInternetConnection,
+    TResult Function()? invalidUrl,
     required TResult orElse(),
   }) {
     if (noInternetConnection != null) {
@@ -368,9 +260,9 @@ class _$NoInternetConnectionImpl implements _NoInternetConnection {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_ServerError value) serverError,
-    required TResult Function(_ParseError value) parseError,
+    required TResult Function(_TooManyRequests value) tooManyRequests,
     required TResult Function(_NoInternetConnection value) noInternetConnection,
+    required TResult Function(_InvalidUrl value) invalidUrl,
   }) {
     return noInternetConnection(this);
   }
@@ -378,9 +270,9 @@ class _$NoInternetConnectionImpl implements _NoInternetConnection {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_ServerError value)? serverError,
-    TResult? Function(_ParseError value)? parseError,
+    TResult? Function(_TooManyRequests value)? tooManyRequests,
     TResult? Function(_NoInternetConnection value)? noInternetConnection,
+    TResult? Function(_InvalidUrl value)? invalidUrl,
   }) {
     return noInternetConnection?.call(this);
   }
@@ -388,9 +280,9 @@ class _$NoInternetConnectionImpl implements _NoInternetConnection {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_ServerError value)? serverError,
-    TResult Function(_ParseError value)? parseError,
+    TResult Function(_TooManyRequests value)? tooManyRequests,
     TResult Function(_NoInternetConnection value)? noInternetConnection,
+    TResult Function(_InvalidUrl value)? invalidUrl,
     required TResult orElse(),
   }) {
     if (noInternetConnection != null) {
@@ -402,4 +294,112 @@ class _$NoInternetConnectionImpl implements _NoInternetConnection {
 
 abstract class _NoInternetConnection implements Failure {
   const factory _NoInternetConnection() = _$NoInternetConnectionImpl;
+}
+
+/// @nodoc
+abstract class _$$InvalidUrlImplCopyWith<$Res> {
+  factory _$$InvalidUrlImplCopyWith(
+          _$InvalidUrlImpl value, $Res Function(_$InvalidUrlImpl) then) =
+      __$$InvalidUrlImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$InvalidUrlImplCopyWithImpl<$Res>
+    extends _$FailureCopyWithImpl<$Res, _$InvalidUrlImpl>
+    implements _$$InvalidUrlImplCopyWith<$Res> {
+  __$$InvalidUrlImplCopyWithImpl(
+      _$InvalidUrlImpl _value, $Res Function(_$InvalidUrlImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$InvalidUrlImpl implements _InvalidUrl {
+  const _$InvalidUrlImpl();
+
+  @override
+  String toString() {
+    return 'Failure.invalidUrl()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$InvalidUrlImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() tooManyRequests,
+    required TResult Function() noInternetConnection,
+    required TResult Function() invalidUrl,
+  }) {
+    return invalidUrl();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? tooManyRequests,
+    TResult? Function()? noInternetConnection,
+    TResult? Function()? invalidUrl,
+  }) {
+    return invalidUrl?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? tooManyRequests,
+    TResult Function()? noInternetConnection,
+    TResult Function()? invalidUrl,
+    required TResult orElse(),
+  }) {
+    if (invalidUrl != null) {
+      return invalidUrl();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_TooManyRequests value) tooManyRequests,
+    required TResult Function(_NoInternetConnection value) noInternetConnection,
+    required TResult Function(_InvalidUrl value) invalidUrl,
+  }) {
+    return invalidUrl(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_TooManyRequests value)? tooManyRequests,
+    TResult? Function(_NoInternetConnection value)? noInternetConnection,
+    TResult? Function(_InvalidUrl value)? invalidUrl,
+  }) {
+    return invalidUrl?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_TooManyRequests value)? tooManyRequests,
+    TResult Function(_NoInternetConnection value)? noInternetConnection,
+    TResult Function(_InvalidUrl value)? invalidUrl,
+    required TResult orElse(),
+  }) {
+    if (invalidUrl != null) {
+      return invalidUrl(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _InvalidUrl implements Failure {
+  const factory _InvalidUrl() = _$InvalidUrlImpl;
 }

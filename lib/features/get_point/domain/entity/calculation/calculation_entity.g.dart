@@ -11,9 +11,10 @@ _$CalculationEntityImpl _$$CalculationEntityImplFromJson(
     _$CalculationEntityImpl(
       error: json['error'] as bool? ?? false,
       message: json['message'] as String? ?? '',
-      data: json['data'] == null
-          ? null
-          : DataEntity.fromJson(json['data'] as Map<String, dynamic>),
+      data: (json['data'] as List<dynamic>?)
+              ?.map((e) => DataEntity.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          [],
     );
 
 Map<String, dynamic> _$$CalculationEntityImplToJson(

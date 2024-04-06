@@ -12,4 +12,9 @@ class PointEntity with _$PointEntity {
 
   factory PointEntity.fromJson(Map<String, dynamic> json) =>
       _$PointEntityFromJson(json);
+
+  @override
+  String toString() {
+    return 'PointEntity(x: $x, y: $y)';
+  }
 }

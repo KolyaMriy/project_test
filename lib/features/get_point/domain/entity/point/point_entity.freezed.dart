@@ -129,11 +129,6 @@ class _$PointEntityImpl implements _PointEntity {
   final int y;
 
   @override
-  String toString() {
-    return 'PointEntity(x: $x, y: $y)';
-  }
-
-  @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
